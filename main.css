@@ -1,0 +1,49 @@
+@font-face {
+    font-family: MC;
+    src: url("fonts/MinecraftRegular-Bmg3.otf") format(opentype);    
+}
+
+body{
+    font-family: MC, sans-serif;
+    --color-error: #cc3333;
+    --color-suecess:#4bb544;
+
+    margin: 0;
+}
+
+.form--hidden{
+    display: none;
+}
+
+.form__message--error{
+    text-align: center;
+    color: var(--color-error);
+}
+
+.form__message--sucess{
+    text-align: center;
+    color: var(--color-suecess);
+}
+
+.div--hidden{
+    display: none;
+}
+
+.memberImg--Show{
+    display: block;
+    width: 10rem;
+    height: 10rem;
+    text-align: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: black;
+    border-radius: 1px;
+    border-width: 1px;
+}
+
+.table__components--hidden{
+    display: none;
+}
