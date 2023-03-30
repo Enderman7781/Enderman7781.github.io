@@ -5,17 +5,19 @@
 
 若想查看實際發布的靜態頁面，可以利用以下連結
 
-
-
-
+> 
+>https://enderman7781.github.io/webProject/
+> 
 
 將想開啟的HTML檔的位址，加在網址後面即可。
 
-例如:
+例如: https://enderman7781.github.io/webProject/MemberCenter.html
+
+此網址會帶領用戶到"會員中心"的靜態頁面
 
 
 ## 本頁面同時記錄本專題的各項編輯
-### 如果有新增、刪除、編輯任何資料 一定要在這邊做留言!!!
+### 如果有新增、刪除、編輯任何資料，一定要在這邊做留言!!!
 不然會有資訊落差，再拜託ㄌ
 
 
@@ -27,4 +29,52 @@
 * 異動檔案(包含新增、刪除、修改內容)
 * JS檔異動的變數名稱，須以註解形式加在HTML或JS的開頭
 * 人員名稱
+* 備註(若無請打無)
 
+# 各項檔案命名原則
+### 檔案內文請以英文呈現優先，以方便套用MC字體，中文網頁若有時間再翻譯
+命名原則如下:
+
+> * 檔案命名方式:
+>>以大寫開頭為主，當有兩字串接時用大寫字頭連接
+>>
+>>例:HomePage
+
+# 以下開始為異動日誌
+### 2023/03/30
+#### 安得 新增資料
+新增數筆資料，以下為樹狀圖
+```
+main
+|
+|_font
+  |_MinecraftBoldItalic-1y1e.otf
+  |_MinecraftBold-nMK1.otf
+  |_MinecraftItalic-R8Mo.otf
+  |_MinecraftRegular-Bmg3.otf
+  |_MinecraftTen-VGORe.ttf
+|_img
+  |_Dirt_background.jpg
+  |_unnamed(1).png
+  |_unnamed(2).png
+  |_unnamed.png
+  |_villager.jpg
+  |_一個圖片名字沒改很長.jpg
+|_MemberSub
+  |_DataMaintain.html
+  |_DataMaintainModify.js
+  |_OrderManage.html
+  |_managementGetFile.js
+  |_Restocking.html (該檔案目前為空 非成品)
+|_alt.png
+|_MemberCenter.html
+|_main.css
+|_Login.html
+|_login.js
+```
+##### 備註: JS變數名下次再加上 太多了
+
+
+
+### New Update Enter Here
+#### Person 
