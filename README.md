@@ -84,5 +84,22 @@ main
 
 
 
-### New Update Enter Here
-#### Person 
+### 2023/4/1
+#### 安得 新增檔案、修改檔案
+新增數筆資料
+Admin 管理者資料夾
+|_AdminMaintain.html  管理者頁面 
+|_Admin.js            管理者頁面操作
+
+修改資料
+DataMaintain.html 
+DataMaintainModify.js
+增加修改密碼功能、修復更改頁面時輸入框跑版問題
+
+OrderManage.html
+增加上一頁功能、修復跑版問題
+
+
+Restocking.html
+更新頁面
+##### 備註: JS變數名下次再加上 太多了
