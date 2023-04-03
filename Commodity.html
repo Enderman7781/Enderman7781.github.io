@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Product Interface</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+	<style>
+		body {
+            background-image: url(img/Dirt_background.jpg);
+		}
+		.container {
+			flex-wrap: nowrap;
+			position: relative;
+			margin-top: 20px;
+			max-width: 960px;
+			padding: 20px;
+            background-color: #fff;
+		}
+
+		.image img {
+			display: block;
+			position: absolute;
+			left: 100px;
+			width:30%;
+			
+		}
+
+		.product-info {
+			margin-left: 500px;
+		}
+
+		.rating {
+			display: flex;
+			align-items: center;
+			margin-top: 10px;
+			margin-right: 20px;
+		}
+
+		.stars {
+			color: orange;
+			font-size: 20px;
+		}
+
+		.comments form textarea {
+			width: 100%;
+			height: 100px;
+			resize: none;
+		}
+
+		.user-info {
+			display: flex;
+			margin-top: 10px;
+			position: relative;
+			font-size: 20px;
+		}
+
+		.avatar {
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			overflow: hidden;
+			margin-right: 10px;
+		}
+
+		.avatar img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+	</style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <a class="navbar-brand" href="#">VILLAGER SHOP</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto"></ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Type Here..." aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+
+	<div class="container">
+		<div class="image" >
+			<img src="https://via.placeholder.com/150x150" alt="商品圖片">
+		</div>
+		<div class="product-info">
+			<h2>商品名稱</h2>
+			<p>NT$ 1000</p>
+			<p>品號：123456</p>
+			<p>結帳方式: Credit Card</p>
+			<p>配送時間: 3-5 Business Days</p>
+			<p>折價券: ABC123</p>
+			<div class="rating">
+				<p>Rating:</p>
+				<div class="stars">
+					<span class="star">&#9733;</span>
+					<span class="star">&#9733;</span>
+					<span class="star">&#9733;</span>
+					<span class="star">&#9734;</span>
+					<span class="star">&#9734;</span>
+				</div>
+				<p>4.0/5</p>
+			</div>
+			<div class="buttons">
+				<button class="btn btn-outline-success my-2 my-sm-0">直接購買</button>
+				<button class="btn btn-outline-success my-2 my-sm-0">加入購物車</button>
+			</div>
+		</div>
+		<div class="comments">
+			<h2>留言板</h2>
+			<form>
+				<label for="comment">留言:</label>
+				<textarea id="comment" name="comment"></textarea>
+				<button class="btn btn-outline-success my-2 my-sm-0">送出</button>
+			</form>
+			<div class="comment-list">
+				<div class="comment">
+					<div class="user-info">
+					<div class="avatar">
+						<img src="https://via.placeholder.com/50x50" alt="Avatar">
+					</div>
+						<p>nick</p>
+						<div class="stars">
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9734;</span>
+							<span class="star">&#9734;</span>
+							<span class="star">&#9734;</span>
+						</div>
+					</div>
+						<p>222</p>
+				</div>
+				<div class="comment">
+					<div class="user-info">
+					<div class="avatar">
+						<img src="https://via.placeholder.com/50x50" alt="Avatar">
+					</div>
+						<p>bob</p>
+						<div class="stars">
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9734;</span>
+						</div>
+					</div>
+						<p>222333</p>
+				</div>
+				<!-- more comments... -->
+			</div>
+		</div>
+	</div>
+</body>
+</html>
