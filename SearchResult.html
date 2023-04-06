@@ -11,10 +11,10 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <link rel="stylesheet" href="./main.css">
-    <title>Document</title>
+    <title>Search Result</title>
 </head>
 
-<body>
+<body background="./img/villiage.jpg">
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <a class="navbar-brand" href="./HomePage.html">VILLAGER SHOP</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -28,7 +28,15 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="./HomePage.html">Home <span class="sr-only">(current)</span></a>
                 </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="./MemberCenter.html">Member Center <span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="./">Your Rate <span class="sr-only">(current)</span></a>
+                </li>
 
+                <!--
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -37,19 +45,27 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="./MemberCenter.html">Member Center</a>
                         <a class="dropdown-item" href="./ShoppingCart.html">Shopping Car</a>
-                        <!--<div class="dropdown-divider"></div>-->
+                        <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">Your Comments</a>
                     </div>
                 </li>
+                -->
 
                 <!--<li class="nav-item">
                     <a class="nav-link disabled" href="#">Disabled</a>
                 </li>-->
             </ul>
+            <button class="btn btn-outline-warning" type="submit" style="margin-right: 1rem;" id="btnCart">Shopping
+                Cart</button>
+
             <button class="btn btn-outline-success" type="submit" style="margin-right: 1rem;"
                 id="btnLogin">Login</button>
 
-            <button class="btn btn-outline-primary" type="submit" style="margin-right: 1rem;">Sign Up</button>
+            <button class="btn btn-outline-primary" type="submit" style="margin-right: 1rem;" id="btnRegister">Sign
+                Up</button>
+
+            <button class="btn btn-outline-secondary table__components--hidden" type="submit" style="margin-right: 1rem;" id="btnRegister">Log
+                out</button>
 
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Type Here..." aria-label="Search">
@@ -58,69 +74,341 @@
 
         </div>
     </nav>
-    <script>
-        $(function () {
-            $("#btnLogin").click(function () {
-                window.location.assign("./Login.html");
-            });
-        });
-    </script>
+
 
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <div class="alert alert-secondary">
-                    <form class="" id=""> <!---->
-                        <table class="table table-warning">
-                            <tr>
-                                <th style="text-align: center;">
-                                    Material
-                                </th>
-                                <td>
-                                    <input type="checkbox" aria-label="Checkbox for following text input"> A
-                                    <input type="checkbox" aria-label="Checkbox for following text input"> B
-                                    <input type="checkbox" aria-label="Checkbox for following text input"> C
-                                </td>
-                            </tr>
-                            <tr>
-                                <th style="text-align: center;">
-                                    Manufacture
-                                </th>
-                                <td>
-                                    <input type="checkbox" aria-label="Checkbox for following text input"> A
-                                    <input type="checkbox" aria-label="Checkbox for following text input"> B
-                                    <input type="checkbox" aria-label="Checkbox for following text input"> C
-                                </td>
-                            </tr>
-                            <tr>
-                                <th style="text-align: center;">
-                                    
-                                </th>
-                                <td>
-                                    <input type="checkbox" aria-label="Checkbox for following text input"> A
-                                    <input type="checkbox" aria-label="Checkbox for following text input"> B
-                                    <input type="checkbox" aria-label="Checkbox for following text input"> C
-                                </td>
-                            </tr>
-                            <tr>
-                                <th style="text-align: center; vertical-align: middle;">Product Name</th>
-                                <td>
-                                    <input type="search" placeholder="Type Here" class="form-control">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="2" style="text-align: center;">
-                                    <button class="btn btn-danger" type="reset">Reset Filter</button>
-                                    <button class="btn btn-success" type="submit">Search</button>
-                                    
-                                </td>
-                            </tr>
-                        </table>
-                    </form>
+                <div class="alert alert-secondary" style="margin-top: 2rem; opacity: 0.95;">
+                    <h4 style="display: inline-block;">
+
+                        <a class="" data-bs-toggle="collapse" href="#collapseFilter" style="text-align: right ;">
+                            Filter (Click to show)
+                        </a>
+                    </h4>
+
+                    <div class="collapse" id="collapseFilter">
+                        <form class="" id=""> <!---->
+                            <table class="table table-secondary">
+                                <tr>
+                                    <th style="text-align: center;">
+                                        Material
+                                    </th>
+                                    <td>
+                                        <input type="checkbox" aria-label="Checkbox for following text input"> Wood
+                                        <input type="checkbox" aria-label="Checkbox for following text input"> Stone
+                                        <input type="checkbox" aria-label="Checkbox for following text input"> Gold
+                                        <input type="checkbox" aria-label="Checkbox for following text input"> Iron
+                                        <input type="checkbox" aria-label="Checkbox for following text input"> Diamond
+                                        <input type="checkbox" aria-label="Checkbox for following text input"> Netherite
+                                        <input type="checkbox" aria-label="Checkbox for following text input"> Chain
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th style="text-align: center;">
+                                        Manufacture
+                                    </th>
+                                    <td>
+                                        <input type="checkbox" aria-label="Checkbox for following text input"> Sakura
+                                        Village
+                                        <input type="checkbox" aria-label="Checkbox for following text input"> Kokurashi
+                                        <input type="checkbox" aria-label="Checkbox for following text input"> Hiroshima
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th style="text-align: center;">
+                                        Enchant
+                                    </th>
+                                    <td>
+                                        <input type="checkbox" aria-label="Checkbox for following text input"> Enchant
+                                        <input type="checkbox" aria-label="Checkbox for following text input"> Not
+                                        Enchant
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th style="text-align: center;">
+                                        Special Enchant
+                                    </th>
+                                    <td>
+                                        <input type="checkbox" aria-label="Checkbox for following text input"> Demolish
+                                        Curse
+                                        <input type="checkbox" aria-label="Checkbox for following text input"> Wrap
+                                        Curse
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th style="text-align: center; vertical-align: middle;">Search By Price</th>
+                                    <td>
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" placeholder="Lowest"
+                                                aria-label="Username">
+                                            <span class="input-group-text">To</span>
+                                            <input type="text" class="form-control" placeholder="Highest"
+                                                aria-label="Server">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" style="text-align: center;">
+                                        <button class="btn btn-danger" type="reset">Reset</button>
+                                        <button class="btn btn-success" type="submit">Filter</button>
+
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+
+
+
+                </div>
+
+                <div class="alert alert-secondary" style="opacity: 0.95;">
+
+                    <!--Pattern is here-->
+                    <div class="row row-cols-1 row-cols-md-4 g-4" style="padding: 1rem;">
+                        <div class="col">
+                            <div class="card h-100">
+                                <a href="#"><img src="./img/minecraftDiamondSword.png" class="card-img-top"
+                                        alt="..."></a>
+                                <div onclick="location.href='#';" style="cursor:pointer;" class="card-body">
+                                    <h5 class="card-title">Diamond Sword</h5>
+                                    <p class="card-text">This is a diamond sword</p>
+                                </div>
+                                <h4 style="text-align: right; margin-right: 0.5rem;">$ 3,600</h4>
+                                <button class="btn btn-outline-success"
+                                    style="margin-bottom: 0.5rem; margin-right: 0.5rem; margin-left: 0.5rem;">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                                <a href="#"><img src="..." class="card-img-top" alt="..."></a>
+                                <div onclick="location.href='#';" style="cursor:pointer;" class="card-body">
+                                    <h5 class="card-title">Diamond Sword</h5>
+                                    <p class="card-text">This is a diamond sword</p>
+                                </div>
+                                <h4 style="text-align: right; margin-right: 0.5rem;">$ 3,600</h4>
+                                <button class="btn btn-outline-success"
+                                    style="margin-bottom: 0.5rem; margin-right: 0.5rem; margin-left: 0.5rem;">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                                <a href="#"><img src="..." class="card-img-top" alt="..."></a>
+                                <div onclick="location.href='#';" style="cursor:pointer;" class="card-body">
+                                    <h5 class="card-title">Diamond Sword</h5>
+                                    <p class="card-text">This is a diamond sword</p>
+                                </div>
+                                <h4 style="text-align: right; margin-right: 0.5rem;">$ 3,600</h4>
+                                <button class="btn btn-outline-success"
+                                    style="margin-bottom: 0.5rem; margin-right: 0.5rem; margin-left: 0.5rem;">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                                <a href="#"><img src="..." class="card-img-top" alt="..."></a>
+                                <div onclick="location.href='#';" style="cursor:pointer;" class="card-body">
+                                    <h5 class="card-title">Diamond Sword</h5>
+                                    <p class="card-text">This is a diamond sword</p>
+                                </div>
+                                <h4 style="text-align: right; margin-right: 0.5rem;">$ 3,600</h4>
+                                <button class="btn btn-outline-success"
+                                    style="margin-bottom: 0.5rem; margin-right: 0.5rem; margin-left: 0.5rem;">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row row-cols-1 row-cols-md-4 g-4" style="padding: 1rem;">
+                        <div class="col">
+                            <div class="card h-100">
+                                <a href="#"><img src="..." class="card-img-top" alt="..."></a>
+                                <div onclick="location.href='#';" style="cursor:pointer;" class="card-body">
+                                    <h5 class="card-title">Diamond Sword</h5>
+                                    <p class="card-text">This is a diamond sword</p>
+                                </div>
+                                <h4 style="text-align: right; margin-right: 0.5rem;">$ 3,600</h4>
+                                <button class="btn btn-outline-success"
+                                    style="margin-bottom: 0.5rem; margin-right: 0.5rem; margin-left: 0.5rem;">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                                <a href="#"><img src="..." class="card-img-top" alt="..."></a>
+                                <div onclick="location.href='#';" style="cursor:pointer;" class="card-body">
+                                    <h5 class="card-title">Diamond Sword</h5>
+                                    <p class="card-text">This is a diamond sword</p>
+                                </div>
+                                <h4 style="text-align: right; margin-right: 0.5rem;">$ 3,600</h4>
+                                <button class="btn btn-outline-success"
+                                    style="margin-bottom: 0.5rem; margin-right: 0.5rem; margin-left: 0.5rem;">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                                <a href="#"><img src="..." class="card-img-top" alt="..."></a>
+                                <div onclick="location.href='#';" style="cursor:pointer;" class="card-body">
+                                    <h5 class="card-title">Diamond Sword</h5>
+                                    <p class="card-text">This is a diamond sword</p>
+                                </div>
+                                <h4 style="text-align: right; margin-right: 0.5rem;">$ 3,600</h4>
+                                <button class="btn btn-outline-success"
+                                    style="margin-bottom: 0.5rem; margin-right: 0.5rem; margin-left: 0.5rem;">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                                <a href="#"><img src="..." class="card-img-top" alt="..."></a>
+                                <div onclick="location.href='#';" style="cursor:pointer;" class="card-body">
+                                    <h5 class="card-title">Diamond Sword</h5>
+                                    <p class="card-text">This is a diamond sword</p>
+                                </div>
+                                <h4 style="text-align: right; margin-right: 0.5rem;">$ 3,600</h4>
+                                <button class="btn btn-outline-success"
+                                    style="margin-bottom: 0.5rem; margin-right: 0.5rem; margin-left: 0.5rem;">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row row-cols-1 row-cols-md-4 g-4" style="padding: 1rem;">
+                        <div class="col">
+                            <div class="card h-100">
+                                <a href="#"><img src="..." class="card-img-top" alt="..."></a>
+                                <div onclick="location.href='#';" style="cursor:pointer;" class="card-body">
+                                    <h5 class="card-title">Diamond Sword</h5>
+                                    <p class="card-text">This is a diamond sword</p>
+                                </div>
+                                <h4 style="text-align: right; margin-right: 0.5rem;">$ 3,600</h4>
+                                <button class="btn btn-outline-success"
+                                    style="margin-bottom: 0.5rem; margin-right: 0.5rem; margin-left: 0.5rem;">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                                <a href="#"><img src="..." class="card-img-top" alt="..."></a>
+                                <div onclick="location.href='#';" style="cursor:pointer;" class="card-body">
+                                    <h5 class="card-title">Diamond Sword</h5>
+                                    <p class="card-text">This is a diamond sword</p>
+                                </div>
+                                <h4 style="text-align: right; margin-right: 0.5rem;">$ 3,600</h4>
+                                <button class="btn btn-outline-success"
+                                    style="margin-bottom: 0.5rem; margin-right: 0.5rem; margin-left: 0.5rem;">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                                <a href="#"><img src="..." class="card-img-top" alt="..."></a>
+                                <div onclick="location.href='#';" style="cursor:pointer;" class="card-body">
+                                    <h5 class="card-title">Diamond Sword</h5>
+                                    <p class="card-text">This is a diamond sword</p>
+                                </div>
+                                <h4 style="text-align: right; margin-right: 0.5rem;">$ 3,600</h4>
+                                <button class="btn btn-outline-success"
+                                    style="margin-bottom: 0.5rem; margin-right: 0.5rem; margin-left: 0.5rem;">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                                <a href="#"><img src="..." class="card-img-top" alt="..."></a>
+                                <div onclick="location.href='#';" style="cursor:pointer;" class="card-body">
+                                    <h5 class="card-title">Diamond Sword</h5>
+                                    <p class="card-text">This is a diamond sword</p>
+                                </div>
+                                <h4 style="text-align: right; margin-right: 0.5rem;">$ 3,600</h4>
+                                <button class="btn btn-outline-success"
+                                    style="margin-bottom: 0.5rem; margin-right: 0.5rem; margin-left: 0.5rem;">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row row-cols-1 row-cols-md-4 g-4" style="padding: 1rem;">
+                        <div class="col">
+                            <div class="card h-100">
+                                <a href="#"><img src="..." class="card-img-top" alt="..."></a>
+                                <div onclick="location.href='#';" style="cursor:pointer;" class="card-body">
+                                    <h5 class="card-title">Diamond Sword</h5>
+                                    <p class="card-text">This is a diamond sword</p>
+                                </div>
+                                <h4 style="text-align: right; margin-right: 0.5rem;">$ 3,600</h4>
+                                <button class="btn btn-outline-success"
+                                    style="margin-bottom: 0.5rem; margin-right: 0.5rem; margin-left: 0.5rem;">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                                <a href="#"><img src="..." class="card-img-top" alt="..."></a>
+                                <div onclick="location.href='#';" style="cursor:pointer;" class="card-body">
+                                    <h5 class="card-title">Diamond Sword</h5>
+                                    <p class="card-text">This is a diamond sword</p>
+                                </div>
+                                <h4 style="text-align: right; margin-right: 0.5rem;">$ 3,600</h4>
+                                <button class="btn btn-outline-success"
+                                    style="margin-bottom: 0.5rem; margin-right: 0.5rem; margin-left: 0.5rem;">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                                <a href="#"><img src="..." class="card-img-top" alt="..."></a>
+                                <div onclick="location.href='#';" style="cursor:pointer;" class="card-body">
+                                    <h5 class="card-title">Diamond Sword</h5>
+                                    <p class="card-text">This is a diamond sword</p>
+                                </div>
+                                <h4 style="text-align: right; margin-right: 0.5rem;">$ 3,600</h4>
+                                <button class="btn btn-outline-success"
+                                    style="margin-bottom: 0.5rem; margin-right: 0.5rem; margin-left: 0.5rem;">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                                <a href="#"><img src="..." class="card-img-top" alt="..."></a>
+                                <div onclick="location.href='#';" style="cursor:pointer;" class="card-body">
+                                    <h5 class="card-title">Diamond Sword</h5>
+                                    <p class="card-text">This is a diamond sword</p>
+                                </div>
+                                <h4 style="text-align: right; margin-right: 0.5rem;">$ 3,600</h4>
+                                <button class="btn btn-outline-success"
+                                    style="margin-bottom: 0.5rem; margin-right: 0.5rem; margin-left: 0.5rem;">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </div>
     </div>
+
 
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -138,6 +426,20 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            $("#btnLogin").click(function () {
+                window.location.assign("./Login.html?registered=false");
+            });
+            $("#btnRegister").click(function () {
+                window.location.assign("./Login.html?registered=true");
+            });
+
+            $("#btnCart").click(function () {
+                window.location.assign("./ShoppingCart.html");
+            });
+        });
+    </script>
 </body>
 
 </html>
