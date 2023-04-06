@@ -24,6 +24,21 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
+  
+  <script>
+        $(function () {
+            $("#btnLogin").click(function () {
+                window.location.assign("./Login.html?registered=false");
+            });
+            $("#btnRegister").click(function () {
+                window.location.assign("./Login.html?registered=true");
+            });
+
+            $("#btnCart").click(function () {
+                window.location.assign("./ShoppingCart.html");
+            });
+        });
+    </script>
 
   <!--BootStrap Pattern-->
   <!--Header-->
@@ -40,7 +55,15 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="./HomePage.html">Home <span class="sr-only">(current)</span></a>
                 </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="./MemberCenter.html">Member Center <span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="./">Your Rate <span class="sr-only">(current)</span></a>
+                </li>
 
+                <!--
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -49,19 +72,27 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="./MemberCenter.html">Member Center</a>
                         <a class="dropdown-item" href="./ShoppingCart.html">Shopping Car</a>
-                        <!--<div class="dropdown-divider"></div>-->
+                        <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">Your Comments</a>
                     </div>
                 </li>
+                -->
 
                 <!--<li class="nav-item">
                     <a class="nav-link disabled" href="#">Disabled</a>
                 </li>-->
             </ul>
+            <button class="btn btn-outline-warning" type="submit" style="margin-right: 1rem;" id="btnCart">Shopping
+                Cart</button>
+
             <button class="btn btn-outline-success" type="submit" style="margin-right: 1rem;"
                 id="btnLogin">Login</button>
 
-            <button class="btn btn-outline-primary" type="submit" style="margin-right: 1rem;">Sign Up</button>
+            <button class="btn btn-outline-primary" type="submit" style="margin-right: 1rem;" id="btnRegister">Sign
+                Up</button>
+
+            <button class="btn btn-outline-secondary table__components--hidden" type="submit" style="margin-right: 1rem;" id="btnRegister">Log
+                out</button>
 
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Type Here..." aria-label="Search">
@@ -70,13 +101,6 @@
 
         </div>
     </nav>
-  <script>
-        $(function () {
-            $("#btnLogin").click(function () {
-                window.location.assign("./Login.html");
-            });
-        });
-    </script>
 
 
 
