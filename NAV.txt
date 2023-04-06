@@ -84,6 +84,14 @@ Including BootStrap,jQuery Script and Link -->
         </div>
     </nav>
     
+    <!--上一頁按鈕 路徑請自己設定 Previous Page Button-->
+          <button class="btn btn-info" type="submit" style="margin-bottom: 1rem;" onclick="prePage()">← Previous Page</button>
+          <script>
+            function prePage(){
+              window.location.assign("#");  <!-- 由此修改路徑 -->
+            }
+          </script>
+    
     
     <!-- BootStrap Script Import, 放在Body的最末端 -->
 
