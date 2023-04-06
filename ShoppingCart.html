@@ -1,133 +1,128 @@
 <!DOCTYPE html>
-<html  lang="en">
+<html lang="en">
+
 <head>
-	<title>購物車</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShoppingCart</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="main.css">
-	<style>
-		body {
-            background-image: url(img/Dirt_background.jpg);
-		}
+    <link rel="stylesheet" href="/css/main.css">
+    <style>
+        body {
+            background-image: url(img/Cave.jpg);
+            max-width: 100%;
+            max-height: 100%;
+        }
 
-		.container {
-			display: flex;
-			flex-wrap: wrap;
-			margin: 0px;
-		}
+        .product {
+            display: inline-block;
+            margin: 10px;
+            width: 30%;
+            min-width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+            background-color: #ffffffe0;
 
-		.product {
-			display: inline-block;
-			margin: 10px;
-			width: 30%;
-			min-width: 300px;
-			border: 1px solid #ddd;
-			border-radius: 4px;
-			padding: 10px;
-			box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-			position: relative;
-            background-color: #fff;
-		}
+        }
 
         .productCheckbox {
             position: absolute;
-			top: 8px;
-			left: 8px;
-			cursor: pointer;            
+            top: 8px;
+            left: 10px;
+            cursor: pointer;
         }
 
-		.product img {
-			max-width: 100%;
-			height: auto;
+        .product img {
+            max-width: 100%;
+            height: auto;
             margin-left: 22%;
-		}
+        }
 
-		.productInfo {
-			display: inline-block;
-			margin-left: 20px;
-			vertical-align: top;
+        .productInfo {
+            display: inline-block;
+            margin-left: 20px;
+            vertical-align: top;
             text-align: center;
-			width: 80%;
-		}
+            width: 80%;
+        }
 
-		.productName {
-			font-size: 20px;
-			font-weight: bold;
-			margin: 0;
-			margin-bottom: 5px;
-			display: inline-block;
-			vertical-align: top;
-			width: 60%;
-		}
+        .productName {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0;
+            margin-bottom: 5px;
+            display: inline-block;
+            vertical-align: top;
+            width: 60%;
+        }
 
-		.productId {
-			font-size: 11px;
-			color: #888;
-			margin: 0;
-			margin-bottom: 5px;
-			display: inline-block;
-			vertical-align: top;
-			width: 40%;
-		}
+        .productId {
+            font-size: 11px;
+            color: #585656;
+            margin: 0;
+            margin-bottom: 5px;
+            display: inline-block;
+            vertical-align: top;
+            width: 40%;
+        }
 
-		.productPrice {
-			font-size: 20px;
-			font-weight: bold;
-			margin: 0;
-			margin-bottom: 10px;
-		}
+        .productPrice {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0;
+            margin-bottom: 10px;
+        }
 
-		.productQuantity {
-			display: inline-block;
-			margin: 0 10px;
-			width: 100px;
-			height: 40px;
-			text-align: center;
-			line-height: 40px;
-			border: 1px solid #ddd;
-			border-radius: 4px;
-			font-size: 16px;
-			font-weight: bold;
-		}
+        .productQuantity {
+            display: inline-block;
+            margin: 0 10px;
+            width: 100px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+        }
 
-		.productAction {
-			display: inline-block;
-			margin-left: 5px;
-			margin-right: 5px;
-			width: 30px;
-			height: 30px;
-			text-align: center;
-			border: none;
-			border-radius: 4px;
-			font-size: 16px;
-			font-weight: bold;
-			cursor: pointer;
-			background-color: #4CAF50;
-			color: #fff;
-		}
-
-		.productAction:hover {
-			background-color: #45a049;
+        .productAction {
+            display: inline-block;
+            margin-left: 5px;
+            margin-right: 5px;
+            width: 30px;
+            height: 30px;
+            text-align: center;
             border: none;
-		}
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: #fff;
+        }
 
-		.productRemove {
-			position: absolute;
-			top: 5px;
-			right: 5px;
-			cursor: pointer;
-			font-size: 16px;
-			color: #888;
-		}
+        .productAction:hover {
+            background-color: #45a049;
+            border: none;
+        }
 
-		.productRemove:hover {
-			color: #f00;
-		}
+        .productRemove {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            color: #888;
+        }
 
         .checkoutContainer {
-            position: fixed; /* 設置為固定定位 */
+            position: fixed;
+            /* 設置為固定定位 */
             bottom: 0;
             width: 100%;
         }
@@ -140,15 +135,8 @@
             justify-content: space-between;
             align-items: center;
             padding: 10px 20px;
-            box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.2); /* 添加陰影效果 */
-        }
-
-        .checkoutHeader {
-            font-size: 20px;
-            font-weight: bold;
-            margin: 0;
-            margin-bottom: 10px;
-            text-align: center;
+            box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.2);
+            /* 添加陰影效果 */
         }
 
         .checkoutTotal {
@@ -159,17 +147,17 @@
             text-align: center;
         }
 
-
         .groupInfo {
-            height: 350px;
-            color: white;
             margin-top: 10%;
         }
-</style>
+    </style>
 </head>
+
 <body>
-	<nav class="navbar navbar-expand-lg navbar-light bg-white">
-        <a class="navbar-brand" href="#">VILLAGER SHOP</a>
+
+    <!--nav bar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <a class="navbar-brand" href="/HomePage.html">VILLAGER SHOP</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -212,114 +200,169 @@
         </div>
     </nav>
 
-
-	<div class="container">
-        <!--    product 1 -->
-		<div class="product">
-			<input type="checkbox" class="productCheckbox" >
-			<img src="https://via.placeholder.com/150x150" alt="商品圖片">
-			<div class="productInfo">
-				<p class="productName">商品名稱</p>
-				<p class="productId">品號：123456</p>
-				<p class="productPrice">NT$ 1000</p>
-				<button class="productAction buttonSub">-</button>
-                <input type="text" class="productQuantity" value="1">
-				<button class="productAction buttonAdd">+</button>
-				<div class="productRemove">X</div>
-			</div>
-		</div>
-
-        <!--    product 2 -->
-		<div class="product">
-			<input type="checkbox" class="productCheckbox">
-			<img src="https://via.placeholder.com/150x150" alt="商品圖片">
-			<div class="productInfo">
-				<p class="productName">商品名稱</p>
-				<p class="productId">品號：123456</p>
-				<p class="productPrice">NT$ 1000</p>
-				<button class="productAction buttonSub">-</button>
-                <input type="text" class="productQuantity" value="1">
-				<button class="productAction buttonAdd">+</button>
-				<div class="productRemove">X</div>
-			</div>
-		</div>
-
-        <!--    product 3 -->
-		<div class="product">
-			<input type="checkbox" class="productCheckbox">
-			<img src="https://via.placeholder.com/150x150" alt="商品圖片">
-			<div class="productInfo">
-				<p class="productName">商品名稱</p>
-				<p class="productId">品號：123456</p>
-				<p class="productPrice">NT$ 1000</p>
-				<button class="productAction buttonSub">-</button>
-                <input type="text" class="productQuantity" value="1">
-				<button class="productAction buttonAdd">+</button>
-				<div class="productRemove">X</div>
-			</div>
-		</div>
-
-        <!--    product 4 -->
-		<div class="product">
-			<input type="checkbox" class="productCheckbox">
-			<img src="https://via.placeholder.com/150x150" alt="商品圖片">
-			<div class="productInfo">
-				<p class="productName">商品名稱</p>
-				<p class="productId">品號：123456</p>
-				<p class="productPrice">NT$ 1000</p>
-				<button class="productAction buttonSub">-</button>
-                <input type="text" class="productQuantity" value="1">
-				<button class="productAction buttonAdd">+</button>
-				<div class="productRemove">X</div>
-			</div>
-		</div>
-        
-        <!--    product 5 -->
-		<div class="product">
-			<input type="checkbox" class="productCheckbox">
-			<img src="https://via.placeholder.com/150x150" alt="商品圖片">
-			<div class="productInfo">
-				<p class="productName">商品名稱</p>
-				<p class="productId">品號：123456</p>
-				<p class="productPrice">NT$ 1000</p>
-				<button class="productAction buttonSub">-</button>
-                <input type="text" class="productQuantity" value="1">
-				<button class="productAction buttonAdd">+</button>
-				<div class="productRemove">X</div>
-			</div>
-		</div>
-        
-        <!--    product 6 -->
-		<div class="product">
-			<input type="checkbox" class="productCheckbox">
-			<img src="https://via.placeholder.com/150x150" alt="商品圖片">
-			<div class="productInfo">
-				<p class="productName">商品名稱</p>
-				<p class="productId">品號：123456</p>
-				<p class="productPrice">NT$ 1000</p>
-				<button class="productAction buttonSub">-</button>
-                <input type="text" class="productQuantity" value="1">
-				<button class="productAction buttonAdd">+</button>
-				<div class="productRemove">X</div>
-			</div>
-		</div>
-    </div>
-        <!--    checkout -->
-        <div class="checkoutContainer">
-            <div class="checkout">
-                <div class="checkoutSelect">
-                    <input type="checkbox" id="checkoutSelectAll" class="checkoutSelectAll">
-                    <label for="checkoutSelectAll">全選</label>
+    <div class="container">
+        <div clas="row">
+            <div class="col-12">
+                <!--    product 1 -->
+                <div class="product">
+                    <input type="checkbox" class="productCheckbox">
+                    <img src="https://via.placeholder.com/150x150" alt="商品圖片">
+                    <div class="productInfo">
+                        <p class="productName">Commodity Name</p>
+                        <p class="productId">Product Id：123456</p>
+                        <p class="productPrice">NT$ 1000</p>
+                        <button class="productAction buttonSub">-</button>
+                        <input type="text" class="productQuantity" value="1">
+                        <button class="productAction buttonAdd">+</button>
+                        <div class="btn btn-outline-danger">Remove</div>
+                    </div>
                 </div>
-            <div class="checkoutInfo">
-                <p class="checkoutHeader">購買清單</p>
-                <p class="checkoutTotal">總價格：NT$ 4000</p>
-            </div>
-                <button class="btn btn-outline-success my-2 my-sm-0">移除選取</button>
-                <button class="btn btn-outline-success my-2 my-sm-0">結帳</button>
+
+                <!--    product 2 -->
+                <div class="product">
+                    <input type="checkbox" class="productCheckbox">
+                    <img src="https://via.placeholder.com/150x150" alt="商品圖片">
+                    <div class="productInfo">
+                        <p class="productName">Commodity Name</p>
+                        <p class="productId">Product Id：123456</p>
+                        <p class="productPrice">NT$ 1000</p>
+                        <button class="productAction buttonSub">-</button>
+                        <input type="text" class="productQuantity" value="1">
+                        <button class="productAction buttonAdd">+</button>
+                        <div class="btn btn-outline-danger">Remove</div>
+                    </div>
+                </div>
+
+                <!--    product 3 -->
+                <div class="product">
+                    <input type="checkbox" class="productCheckbox">
+                    <img src="https://via.placeholder.com/150x150" alt="商品圖片">
+                    <div class="productInfo">
+                        <p class="productName">Commodity Name</p>
+                        <p class="productId">Product Id：123456</p>
+                        <p class="productPrice">NT$ 1000</p>
+                        <button class="productAction buttonSub">-</button>
+                        <input type="text" class="productQuantity" value="1">
+                        <button class="productAction buttonAdd">+</button>
+                        <div class="btn btn-outline-danger">Remove</div>
+                    </div>
+                </div>
+
+                <!--    product 4 -->
+                <div class="product">
+                    <input type="checkbox" class="productCheckbox">
+                    <img src="https://via.placeholder.com/150x150" alt="商品圖片">
+                    <div class="productInfo">
+                        <p class="productName">Commodity Name</p>
+                        <p class="productId">Product Id：123456</p>
+                        <p class="productPrice">NT$ 1000</p>
+                        <button class="productAction buttonSub">-</button>
+                        <input type="text" class="productQuantity" value="1">
+                        <button class="productAction buttonAdd">+</button>
+                        <div class="btn btn-outline-danger">Remove</div>
+                    </div>
+                </div>
+
+                <!--    product 5 -->
+                <div class="product">
+                    <input type="checkbox" class="productCheckbox">
+                    <img src="https://via.placeholder.com/150x150" alt="商品圖片">
+                    <div class="productInfo">
+                        <p class="productName">Commodity Name</p>
+                        <p class="productId">Product Id：123456</p>
+                        <p class="productPrice">NT$ 1000</p>
+                        <button class="productAction buttonSub">-</button>
+                        <input type="text" class="productQuantity" value="1">
+                        <button class="productAction buttonAdd">+</button>
+                        <div class="btn btn-outline-danger">Remove</div>
+                    </div>
+                </div>
+
+                <!--    product 6 -->
+                <div class="product">
+                    <input type="checkbox" class="productCheckbox">
+                    <img src="https://via.placeholder.com/150x150" alt="商品圖片">
+                    <div class="productInfo">
+                        <p class="productName">Commodity Name</p>
+                        <p class="productId">Product Id：123456</p>
+                        <p class="productPrice">NT$ 1000</p>
+                        <button class="productAction buttonSub">-</button>
+                        <input type="text" class="productQuantity" value="1">
+                        <button class="productAction buttonAdd">+</button>
+                        <div class="btn btn-outline-danger">Remove</div>
+                    </div>
+                </div>
             </div>
         </div>
-          
+    </div>
+    <!--    checkout -->
+    <div class="checkoutContainer">
+        <div class="checkout">
+            <div class="checkoutSelect">
+                <input type="checkbox" id="checkoutSelectAll" class="checkoutSelectAll">
+                <label for="checkoutSelectAll">Select All</label>
+            </div>
+            <div class="checkoutInfo">
+                <p class="checkoutTotal">Total：NT$ 4000</p>
+            </div>
+            <button class="btn btn-outline-success">Remove All</button>
+            <button class="btn btn-outline-success">Pay</button>
+        </div>
+    </div>
     <div class="groupInfo"></div>
+    <!--footer
+    <div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="text-light mb-4">Address</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Shida Road, Changhua, Taiwan</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>04-7232105</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                    <a href="http://www.ncue.edu.tw">http://www.ncue.edu.tw</a>
+
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="text-light mb-4">Products</h4>
+                    <a class="btn btn-link" href="">Weapons</a>
+                    <a class="btn btn-link" href="">Armor</a>
+                    <a class="btn btn-link" href="">Food</a>
+                    <a class="btn btn-link" href="">Enhance</a>
+                    <a class="btn btn-link" href="">Potion</a>
+                    <a class="btn btn-link" href="">Tool</a>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="text-light mb-4">Quick Links</h4>
+                    <a class="btn btn-link" href="#about_us">About Us</a>
+                    <a class="btn btn-link" href="">Contact Us</a>
+                    <a class="btn btn-link" href="#our_products">Our Products</a>
+                    <a class="btn btn-link" href="#team_member">Team Member</a>
+                    <a class="btn btn-link" href="#comments">Comments</a>
+                </div>
+
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">Village Shop</a>, All Right Reserved.
+                    </div>
+                    <div class="col-md-4 text-center text-md-end">
+                        
+                        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+
+                    </div>
+                    <div class="col-md-4 text-center text-md-end">
+
+                        <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"
+                            style="padding-bottom: 1rem;">Back To Top</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    -->
 </body>
-</html>		
+
+</html>
