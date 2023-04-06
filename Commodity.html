@@ -5,7 +5,7 @@
 	<title>Product Interface</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="/css/main.css">
 	<style>
 		body {
             background-image: url(img/Dirt_background.jpg);
@@ -73,49 +73,50 @@
 	</style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
-        <a class="navbar-brand" href="#">VILLAGER SHOP</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Information
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="./MemberCenter.html">Member Center</a>
-                        <a class="dropdown-item" href="./ShoppingCart.html">Shopping Car</a>
-                        <!--<div class="dropdown-divider"></div>-->
-                        <a class="dropdown-item" href="#">Your Comments</a>
-                    </div>
-                </li>
-
-                <!--<li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
-                </li>-->
-            </ul>
-            <button class="btn btn-outline-success" type="submit" style="margin-right: 1rem;"
-                id="btnLogin">Login</button>
-
-            <button class="btn btn-outline-primary" type="submit" style="margin-right: 1rem;">Sign Up</button>
-
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Type Here..." aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-
-        </div>
-    </nav>
+        <!--nav bar-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <a class="navbar-brand" href="/HomePage.html">VILLAGER SHOP</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+    
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Information
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="./MemberCenter.html">Member Center</a>
+                            <a class="dropdown-item" href="./ShoppingCart.html">Shopping Car</a>
+                            <!--<div class="dropdown-divider"></div>-->
+                            <a class="dropdown-item" href="#">Your Comments</a>
+                        </div>
+                    </li>
+    
+                    <!--<li class="nav-item">
+                        <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>-->
+                </ul>
+                <button class="btn btn-outline-success" type="submit" style="margin-right: 1rem;"
+                    id="btnLogin">Login</button>
+    
+                <button class="btn btn-outline-primary" type="submit" style="margin-right: 1rem;">Sign Up</button>
+    
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Type Here..." aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+    
+            </div>
+        </nav>
 
 
 	<div class="container">
@@ -123,12 +124,14 @@
 			<img src="https://via.placeholder.com/150x150" alt="商品圖片">
 		</div>
 		<div class="product-info">
-			<h2>商品名稱</h2>
+			<h2>Commodity Name</h2>
 			<p>NT$ 1000</p>
-			<p>品號：123456</p>
-			<p>結帳方式: Credit Card</p>
-			<p>配送時間: 3-5 Business Days</p>
-			<p>折價券: ABC123</p>
+			<p>Product ID：123456</p>
+			<p>Payment method: Credit Card</p>
+			<p>Delivery Time: 3-5 Business Days</p>
+            <button class="productAction buttonSub">-</button>
+            <input type="text" class="productQuantity" value="1">
+            <button class="productAction buttonAdd">+</button>
 			<div class="rating">
 				<p>Rating:</p>
 				<div class="stars">
