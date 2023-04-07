@@ -39,7 +39,7 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./main.css">
 
 
 </head>
@@ -87,7 +87,7 @@
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
-        <a class="navbar-brand" href="#">VILLAGER SHOP</a>
+        <a class="navbar-brand" href="./HomePage.html">VILLAGER SHOP</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -97,9 +97,17 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link disabled" href="./HomePage.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="./MemberCenter.html">Member Center <span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="./">Your Rate <span class="sr-only">(current)</span></a>
                 </li>
 
+                <!--
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -108,19 +116,27 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="./MemberCenter.html">Member Center</a>
                         <a class="dropdown-item" href="./ShoppingCart.html">Shopping Car</a>
-                        <!--<div class="dropdown-divider"></div>-->
+                        <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">Your Comments</a>
                     </div>
                 </li>
+                -->
 
                 <!--<li class="nav-item">
                     <a class="nav-link disabled" href="#">Disabled</a>
                 </li>-->
             </ul>
+            <button class="btn btn-outline-warning" type="submit" style="margin-right: 1rem;" id="btnCart">Shopping
+                Cart</button>
+
             <button class="btn btn-outline-success" type="submit" style="margin-right: 1rem;"
                 id="btnLogin">Login</button>
 
-            <button class="btn btn-outline-primary" type="submit" style="margin-right: 1rem;">Sign Up</button>
+            <button class="btn btn-outline-primary" type="submit" style="margin-right: 1rem;" id="btnRegister">Sign
+                Up</button>
+
+            <button class="btn btn-outline-secondary table__components--hidden" type="submit" style="margin-right: 1rem;" id="btnRegister">Log
+                out</button>
 
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Type Here..." aria-label="Search">
@@ -129,7 +145,6 @@
 
         </div>
     </nav>
-
     <!-- Navbar End -->
 
 
@@ -204,7 +219,7 @@
                                     best service experience.</p>
                                 <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">More
                                     Info</a>
-                                <a href="./Login.html" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Us Now !</a>
+                                <a href="./Login.html?registered=true" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Us Now !</a>
                             </div>
                         </div>
                     </div>
@@ -224,7 +239,7 @@
                                     lowest-priced on the entire web.</p>
                                 <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">More
                                     Info</a>
-                                <a href="./Login.html" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Us Now !</a>
+                                <a href="./Login.html?registered=true" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Us Now !</a>
                             </div>
                         </div>
                     </div>
@@ -244,7 +259,7 @@
                                     villagers' hero and get the lowest price </p>
                                 <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">More
                                     Info</a>
-                                <a href="./Login.html" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Us Now !</a>
+                                <a href="./Login.html?registered=true" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Us Now !</a>
                             </div>
                         </div>
                     </div>
@@ -358,7 +373,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="./Login.html" class="btn btn-primary py-3 px-5">Join US Now !</a>
+                        <a href="./Login.html?registered=true" class="btn btn-primary py-3 px-5">Join US Now !</a>
                     </div>
                 </div>
             </div>
@@ -382,7 +397,7 @@
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Weapon</h4>
                             <p>Use the sword to beat zombies </p>
-                            <a class="fw-medium" href="./SearcgResult.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                            <a class="fw-medium" href="./SearchResult.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
@@ -394,7 +409,7 @@
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Armor</h4>
                             <p>Avoid creepers assassinate</p>
-                            <a class="fw-medium" href="./SearcgResult.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                            <a class="fw-medium" href="./SearchResult.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
@@ -406,7 +421,7 @@
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Food</h4>
                             <p>The cake is a lie</p>
-                            <a class="fw-medium" href="./SearcgResult.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                            <a class="fw-medium" href="./SearchResult.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
@@ -418,7 +433,7 @@
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Enchant</h4>
                             <p>Reading some ancient books</p>
-                            <a class="fw-medium" href="./SearcgResult.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                            <a class="fw-medium" href="./SearchResult.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
@@ -430,7 +445,7 @@
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Potion</h4>
                             <p>Not the drugs</p>
-                            <a class="fw-medium" href="./SearcgResult.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                            <a class="fw-medium" href="./SearchResult.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
@@ -442,7 +457,7 @@
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Tool</h4>
                             <p>Creeper? OH~ MAN</p>
-                            <a class="fw-medium" href="./SearcgResult.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                            <a class="fw-medium" href="./SearchResult.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
@@ -743,7 +758,7 @@
                         </div>
                         <div class="text-center border border-5 border-light border-top-0 p-4">
                             <h5 class="mb-0">蕭有村</h5>
-                            <small>CD</small>
+                            <small>Friend Collaboration</small>
                         </div>
                     </div>
                 </div>
@@ -759,7 +774,7 @@
             <h1 class="display-5 mb-5">Comments</h1>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="img-fluid bg-light p-2 mx-auto mb-3" src="img/testimonial-1.jpg"
+                    <img class="img-fluid bg-light p-2 mx-auto mb-3" src="./img/villager.jpg"
                         style="width: 90px; height: 90px;">
                     <div class="testimonial-text text-center p-4">
                         <p>客人回饋</p>
@@ -768,7 +783,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="img-fluid bg-light p-2 mx-auto mb-3" src="img/testimonial-1.jpg"
+                    <img class="img-fluid bg-light p-2 mx-auto mb-3" src="./img/villager.jpg"
                         style="width: 90px; height: 90px;">
                     <div class="testimonial-text text-center p-4">
                         <p>客人回饋</p>
@@ -777,7 +792,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="img-fluid bg-light p-2 mx-auto mb-3" src="img/testimonial-1.jpg"
+                    <img class="img-fluid bg-light p-2 mx-auto mb-3" src="./img/villager.jpg"
                         style="width: 90px; height: 90px;">
                     <div class="testimonial-text text-center p-4">
                         <p>客人回饋</p>
@@ -837,17 +852,17 @@
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Shida Road, Changhua, Taiwan</p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>04-7232105</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p><!--再改-->
-                    <a href="http://www.ncue.edu.tw">http://www.ncue.edu.tw</a>
+                    <a href="http://www.ncue.edu.tw">National Changhua University of Education</a>
 
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <h4 class="text-light mb-4">Products</h4>
-                    <a class="btn btn-link" href="./SearcgResult.html">Weapons</a>
-                    <a class="btn btn-link" href="./SearcgResult.html">Armor</a>
-                    <a class="btn btn-link" href="./SearcgResult.html">Food</a>
-                    <a class="btn btn-link" href="./SearcgResult.html">Enhance</a>
-                    <a class="btn btn-link" href="./SearcgResult.html">Potion</a>
-                    <a class="btn btn-link" href="./SearcgResult.html">Tool</a>
+                    <a class="btn btn-link" href="./SearchResult.html">Weapons</a>
+                    <a class="btn btn-link" href="./SearchResult.html">Armor</a>
+                    <a class="btn btn-link" href="./SearchResult.html">Food</a>
+                    <a class="btn btn-link" href="./SearchResult.html">Enhance</a>
+                    <a class="btn btn-link" href="./SearchResult.html">Potion</a>
+                    <a class="btn btn-link" href="./SearchResult.html">Tool</a>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <h4 class="text-light mb-4">Quick Links</h4>
@@ -926,7 +941,14 @@
     <script>
         $(function () {
             $("#btnLogin").click(function () {
-                window.location.assign("./Login.html");
+                window.location.assign("./Login.html?registered=false");
+            });
+            $("#btnRegister").click(function () {
+                window.location.assign("./Login.html?registered=true");
+            });
+
+            $("#btnCart").click(function () {
+                window.location.assign("./ShoppingCart.html");
             });
         });
     </script>
