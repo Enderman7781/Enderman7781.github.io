@@ -132,8 +132,7 @@ main.css更新
 #### 安得 新增檔案 錯誤修正 檔案更新
 
 ### 2023/04/08
-#### 許振維 更改Commodity.html介面
-新增Cave.jpg圖片
+#### 許振維 更改Commodity.html介面 新增Cave.jpg圖片
 
 新增檔案
 
